@@ -1,0 +1,13 @@
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.exe.config
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\ssrs-deploy-all.bat
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.exe
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.pdb
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\obj\Debug\SSRSDeployerTool.csprojResolveAssemblyReference.cache
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\obj\Debug\SSRSDeployerTool.exe
+D:\SvnLetterB\Agile\reports\SSRSDeployerTool\SSRSDeployerTool\obj\Debug\SSRSDeployerTool.pdb
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.exe.config
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\obj\Debug\SSRSDeployerTool.exe
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\obj\Debug\SSRSDeployerTool.pdb
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\ssrs-deploy-all.bat
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.exe
+C:\Users\Administrator\Downloads\SSRSDeployerTool\SSRSDeployerTool\bin\Debug\SSRSDeployerTool.pdb

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E050098-39BE-49A2-854B-45A5518065AB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSRSDeployerTool</RootNamespace>
+    <AssemblyName>SSRSDeployerTool</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigDataSourcesCollection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDeployHelper.cs" />
+    <Compile Include="ReportGroupsCollection.cs" />
+    <Compile Include="SsrsDeploy.cs" />
+    <Compile Include="SsrsDataSource.cs" />
+    <Compile Include="SsrsReportGroup.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Web References\SSRSWebService\ActiveState.cs" />
+    <Compile Include="Web References\SSRSWebService\BatchHeader.cs" />
+    <Compile Include="Web References\SSRSWebService\BooleanOperatorEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\CancelBatchCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CancelJobCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CancelJobCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CatalogItem.cs" />
+    <Compile Include="Web References\SSRSWebService\ConditionEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateBatchCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateBatchCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateDataDrivenSubscriptionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateDataDrivenSubscriptionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateDataSourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateFolderCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateLinkedReportCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateModelCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateModelCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateReportCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateReportCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateReportHistorySnapshotCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateReportHistorySnapshotCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateResourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateRoleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateScheduleCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateScheduleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateSubscriptionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\CreateSubscriptionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\CredentialRetrievalEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\DailyRecurrence.cs" />
+    <Compile Include="Web References\SSRSWebService\DataRetrievalPlan.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSetDefinition.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSource.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSourceCredentials.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSourceDefinition.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSourceDefinitionOrReference.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSourcePrompt.cs" />
+    <Compile Include="Web References\SSRSWebService\DataSourceReference.cs" />
+    <Compile Include="Web References\SSRSWebService\DaysOfWeekSelector.cs" />
+    <Compile Include="Web References\SSRSWebService\DeleteItemCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DeleteReportHistorySnapshotCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DeleteRoleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DeleteScheduleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DeleteSubscriptionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DisableDataSourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\DrillthroughType.cs" />
+    <Compile Include="Web References\SSRSWebService\EnableDataSourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\Event.cs" />
+    <Compile Include="Web References\SSRSWebService\ExecuteBatchCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ExecutionSettingEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ExpirationDefinition.cs" />
+    <Compile Include="Web References\SSRSWebService\Extension.cs" />
+    <Compile Include="Web References\SSRSWebService\ExtensionParameter.cs" />
+    <Compile Include="Web References\SSRSWebService\ExtensionSettings.cs" />
+    <Compile Include="Web References\SSRSWebService\ExtensionTypeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\Field.cs" />
+    <Compile Include="Web References\SSRSWebService\FindItemsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\FindItemsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\FireEventCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\FlushCacheCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GenerateModelCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GenerateModelCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetCacheOptionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetCacheOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetDataDrivenSubscriptionPropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetDataDrivenSubscriptionPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetDataSourceContentsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetDataSourceContentsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetExecutionOptionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetExecutionOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetExtensionSettingsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetExtensionSettingsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemDataSourcePromptsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemDataSourcePromptsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemDataSourcesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemDataSourcesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemTypeCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetItemTypeCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelDefinitionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelDefinitionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelItemPermissionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelItemPermissionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelItemPoliciesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetModelItemPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPermissionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPermissionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPoliciesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetRenderResourceCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetRenderResourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportDefinitionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportDefinitionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportHistoryLimitCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportHistoryLimitCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportHistoryOptionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportHistoryOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportLinkCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportLinkCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportParametersCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetReportParametersCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetResourceContentsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetResourceContentsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetRolePropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetRolePropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSchedulePropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSchedulePropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSubscriptionPropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSubscriptionPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPermissionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPermissionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPoliciesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPropertiesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetSystemPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\GetUserModelCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\GetUserModelCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\InheritModelItemParentSecurityCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\InheritParentSecurityCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\InvalidDataSourceReference.cs" />
+    <Compile Include="Web References\SSRSWebService\ItemNamespaceEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ItemNamespaceHeader.cs" />
+    <Compile Include="Web References\SSRSWebService\ItemTypeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\Job.cs" />
+    <Compile Include="Web References\SSRSWebService\JobActionEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\JobStatusEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\JobTypeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ListChildrenCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListChildrenCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListDependentItemsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListDependentItemsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListEventsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListEventsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListExtensionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListExtensionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListJobsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListJobsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelDrillthroughReportsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelDrillthroughReportsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelItemChildrenCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelItemChildrenCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelPerspectivesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListModelPerspectivesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListReportHistoryCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListReportHistoryCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListRolesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListRolesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListScheduledReportsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListScheduledReportsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSchedulesCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSchedulesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSecureMethodsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSecureMethodsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSubscriptionsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSubscriptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSubscriptionsUsingDataSourceCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListSubscriptionsUsingDataSourceCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ListTasksCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ListTasksCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\LogoffCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\LogonUserCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\MinuteRecurrence.cs" />
+    <Compile Include="Web References\SSRSWebService\ModelCatalogItem.cs" />
+    <Compile Include="Web References\SSRSWebService\ModelDrillthroughReport.cs" />
+    <Compile Include="Web References\SSRSWebService\ModelItem.cs" />
+    <Compile Include="Web References\SSRSWebService\ModelItemTypeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ModelPerspective.cs" />
+    <Compile Include="Web References\SSRSWebService\MonthlyDOWRecurrence.cs" />
+    <Compile Include="Web References\SSRSWebService\MonthlyRecurrence.cs" />
+    <Compile Include="Web References\SSRSWebService\MonthsOfYearSelector.cs" />
+    <Compile Include="Web References\SSRSWebService\MoveItemCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\NoSchedule.cs" />
+    <Compile Include="Web References\SSRSWebService\ParameterFieldReference.cs" />
+    <Compile Include="Web References\SSRSWebService\ParameterStateEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ParameterTypeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ParameterValue.cs" />
+    <Compile Include="Web References\SSRSWebService\ParameterValueOrFieldReference.cs" />
+    <Compile Include="Web References\SSRSWebService\PauseScheduleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\Policy.cs" />
+    <Compile Include="Web References\SSRSWebService\PrepareQueryCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\PrepareQueryCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\Property.cs" />
+    <Compile Include="Web References\SSRSWebService\QueryDefinition.cs" />
+    <Compile Include="Web References\SSRSWebService\RecurrencePattern.cs" />
+    <Compile Include="Web References\SSRSWebService\ReportingService2005.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SSRSWebService\RegenerateModelCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\RegenerateModelCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\RemoveAllModelItemPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ReportHistorySnapshot.cs" />
+    <Compile Include="Web References\SSRSWebService\ReportParameter.cs" />
+    <Compile Include="Web References\SSRSWebService\ResumeScheduleCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\Role.cs" />
+    <Compile Include="Web References\SSRSWebService\Schedule.cs" />
+    <Compile Include="Web References\SSRSWebService\ScheduleDefinition.cs" />
+    <Compile Include="Web References\SSRSWebService\ScheduleDefinitionOrReference.cs" />
+    <Compile Include="Web References\SSRSWebService\ScheduleExpiration.cs" />
+    <Compile Include="Web References\SSRSWebService\ScheduleReference.cs" />
+    <Compile Include="Web References\SSRSWebService\ScheduleStateEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\SearchCondition.cs" />
+    <Compile Include="Web References\SSRSWebService\SecurityScopeEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\SensitivityEnum.cs" />
+    <Compile Include="Web References\SSRSWebService\ServerInfoHeader.cs" />
+    <Compile Include="Web References\SSRSWebService\SetCacheOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetDataDrivenSubscriptionPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetDataSourceContentsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetExecutionOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetItemDataSourcesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetModelDefinitionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\SetModelDefinitionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetModelDrillthroughReportsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetModelItemPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportDefinitionCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportDefinitionCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportHistoryLimitCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportHistoryOptionsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportLinkCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetReportParametersCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetResourceContentsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetRolePropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetSchedulePropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetSubscriptionPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetSystemPoliciesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\SetSystemPropertiesCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\Subscription.cs" />
+    <Compile Include="Web References\SSRSWebService\Task.cs" />
+    <Compile Include="Web References\SSRSWebService\TimeExpiration.cs" />
+    <Compile Include="Web References\SSRSWebService\UpdateReportExecutionSnapshotCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ValidateExtensionSettingsCompletedEventArgs.cs" />
+    <Compile Include="Web References\SSRSWebService\ValidateExtensionSettingsCompletedEventHandler.cs" />
+    <Compile Include="Web References\SSRSWebService\ValidValue.cs" />
+    <Compile Include="Web References\SSRSWebService\Warning.cs" />
+    <Compile Include="Web References\SSRSWebService\WeeklyRecurrence.cs" />
+    <Compile Include="Web References\SSRSWebService\WeekNumberEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ssrs-deploy-all.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web References\SSRSWebService\ActiveState.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\CatalogItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\DataRetrievalPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\DataSetDefinition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\DataSource.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\DataSourceDefinition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\DataSourcePrompt.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Event.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ExecutionSettingEnum.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ExpirationDefinition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Extension.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ExtensionParameter.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ExtensionSettings.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ItemTypeEnum.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Job.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ModelCatalogItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ModelDrillthroughReport.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ModelItem.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ParameterValue.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ParameterValueOrFieldReference.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Policy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Property.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SSRSWebService\ReportHistorySnapshot.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ReportParameter.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ReportService2005.wsdl" />
+    <None Include="Web References\SSRSWebService\Role.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Schedule.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\ScheduleDefinitionOrReference.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Subscription.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Task.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SSRSWebService\Warning.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://jinpc:8080/ReportServer/ReportService2005.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SSRSWebService\</RelPath>
+      <UpdateFromURL>http://jinpc:8080/ReportServer/ReportService2005.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SSRSDeployerTool_SSRSWebService_ReportingService2005</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

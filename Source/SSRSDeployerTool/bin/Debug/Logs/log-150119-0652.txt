@@ -1,0 +1,106 @@
+
+CHECK REPORT SERVICE: OK
+
+
+=> v3.0/powerpenu/Book.rdl... Done!
+=> v3.0/powerpenu/ClearLangCache.rdl... Done!
+=> v3.0/powerpenu/Daily Item Pricing.rdl... Done!
+=> v3.0/powerpenu/Diet Spread Sheet Four Diets.rdl... Done!
+=> v3.0/powerpenu/Diet Spread Sheet Six Diets.rdl... Done!
+=> v3.0/powerpenu/Grocery Cart FixedItem - Copy.rdl... Done!
+=> v3.0/powerpenu/Grocery Cart FixedItem.rdl... Done!
+=> v3.0/powerpenu/Grocery Cart.rdl... Done!
+=> v3.0/powerpenu/Inactive Products Linked.rdl... Done!
+=> v3.0/powerpenu/Ingredients Not Linked.rdl... Done!
+=> v3.0/powerpenu/InstallValidation-Images.rdl... Done!
+=> v3.0/powerpenu/InventoryExceptionReport.rdl... Done!
+=> v3.0/powerpenu/Menu Items Not Linked.rdl... Done!
+=> v3.0/powerpenu/Menu Summary Pricing All Meal.rdl... Done!
+=> v3.0/powerpenu/Menu Summary Pricing.rdl... Done!
+=> v3.0/powerpenu/MixedIngredientReport.rdl... Done!
+=> v3.0/powerpenu/Nutrient Analysis.rdl... Done!
+=> v3.0/powerpenu/NutritionalBreakdown.rdl... Done!
+=> v3.0/powerpenu/NutritionalExceptionReport.rdl... Done!
+=> v3.0/powerpenu/NutritionExceptionReport.rdl... Done!
+=> v3.0/powerpenu/NutritionFactPanel.rdl... Done!
+=> v3.0/powerpenu/OrphanedGTINsReport.rdl... Done!
+=> v3.0/powerpenu/PICPortionQuantityMismatch.rdl... Done!
+=> v3.0/powerpenu/Product Nutritional.rdl... Done!
+=> v3.0/powerpenu/Production.rdl... Done!
+=> v3.0/powerpenu/ProductionRecipeToScale.rdl... Done!
+=> v3.0/powerpenu/ProductionRecipeToScaleSub.rdl... Done!
+=> v3.0/powerpenu/ProductionReport.rdl... Done!
+=> v3.0/powerpenu/ProductionReport_Census.rdl... Done!
+=> v3.0/powerpenu/ProductNutritionReport.rdl... Done!
+=> v3.0/powerpenu/Recipe Multi-Yield-New.rdl... Done!
+=> v3.0/powerpenu/Recipe Multi-Yield.rdl... Done!
+=> v3.0/powerpenu/Recipe Nutritional.rdl... Done!
+=> v3.0/powerpenu/Recipe Where Used.rdl... Done!
+=> v3.0/powerpenu/Recipe.rdl... Done!
+=> v3.0/powerpenu/RecipeNutritionalBreakdown.rdl... Done!
+=> v3.0/powerpenu/SubNutritionFactPanel.rdl... Done!
+=> v3.0/powerpenu/USDA Nutritional.rdl... Done!
+=> v3.0/powerpenu/Weekly Report DA.rdl... Done!
+=> v3.0/powerpenu/Weekly Report No Serving DA.rdl... Done!
+=> v3.0/powerpenu/Weekly Report No Serving.rdl... Done!
+=> v3.0/powerpenu/Weekly Report.rdl... Done!
+=> v3.0/powerpenu/menuImage.bmp... Done!
+=> v3.0/powerpenu/menuImg.bmp... Done!
+=> v3.0/powerpenu/menuimgConco.bmp... Done!
+=> v3.0/powerpenu/menuImgHawkeye.bmp... Done!
+=> v3.0/powerpenu/menuImg_180_50.bmp... Done!
+=> v3.0/powerpenu/menuImg_old.bmp... Done!
+
+
+=> v3.0/MenuItem/InstallValidation-Images.rdl... Done!
+=> v3.0/MenuItem/MenuItem.rdl... Done!
+=> v3.0/MenuItem/MenuNutrients.rdl... Done!
+=> v3.0/MenuItem/MenuPlateCostPercentage.rdl... Done!
+=> v3.0/MenuItem/PlateCostPercentage.rdl... Done!
+=> v3.0/MenuItem/RecipeCostAnalysis.rdl... Done!
+=> v3.0/MenuItem/RecipeFoodCostPercentage.rdl... Done!
+=> v3.0/MenuItem/currencySmall.jpg... Done!
+=> v3.0/MenuItem/menuImage.bmp... Done!
+=> v3.0/MenuItem/menuImg.bmp... Done!
+
+
+=> inventory/BasicInventoryReport.rdl... Done!
+=> inventory/BasicInventoryReportGroupByCategory.rdl... Done!
+=> inventory/CostOfGoodsSold.rdl... Done!
+=> inventory/ExtendedInventoryReport.rdl... Done!
+=> inventory/ExtendedInventoryReportGroupByCategory.rdl... Done!
+
+
+=> v3.0/TrayCardHeavy/GenericSelectiveMenu_ThreeSpread.rdl... Done!
+=> v3.0/TrayCardHeavy/GenericSelectiveMenu_TwoSpread.rdl... Done!
+=> v3.0/TrayCardHeavy/InstallValidation-Images.rdl... Done!
+=> v3.0/TrayCardHeavy/RecipeSummaryReport.rdl... Done!
+=> v3.0/TrayCardHeavy/RecipeSummaryReport1.rdl... Done!
+=> v3.0/TrayCardHeavy/RecipeSummarySubReport.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentAddOn.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentAllergy.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentBirthdays.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentDietCensus.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentHeightWeightChartLine.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentMasterReport.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentMealCategorySubstitute.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentNutritionAssessmentReport.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentRecipeSubstitute.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentRoster.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentSelectiveMenu_ThreeSpread.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentSelectiveMenu_TwoSpread.rdl... Done!
+=> v3.0/TrayCardHeavy/ResidentStandardAndAlternativeMenu.rdl... Done!
+=> v3.0/TrayCardHeavy/SignificantWeightChange.rdl... Done!
+=> v3.0/TrayCardHeavy/snacklabel5160.rdl... Done!
+=> v3.0/TrayCardHeavy/SnackLabel5161.rdl... Done!
+=> v3.0/TrayCardHeavy/SnackLabel5162.rdl... Done!
+=> v3.0/TrayCardHeavy/TrayCardHeavy.rdl... Done!
+=> v3.0/TrayCardHeavy/TrayCardHeavynew.rdl... Done!
+=> v3.0/TrayCardHeavy/TrayCardLight.rdl... Done!
+=> v3.0/TrayCardHeavy/WeightRecordingForm.rdl... Done!
+=> v3.0/TrayCardHeavy/menuImage.bmp... Done!
+=> v3.0/TrayCardHeavy/menuImg.bmp... Done!
+
+
+
+=> REPORTS DEPLOYED SUCCESSFULLY!
